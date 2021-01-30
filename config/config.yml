@@ -1,0 +1,18 @@
+dev:
+  profile: default
+  deployBucketName: template-deployment-bucket-dev
+  env:
+    TZ: Asia/Tokyo
+
+stg:
+  profile: default
+  deployBucketName: template-deployment-bucket-stg
+  env:
+    TZ: Asia/Tokyo
+
+prod:
+  profile: default
+  deployBucketName: template-deployment-bucket-prod
+  env:
+    TZ: Asia/Tokyo
+

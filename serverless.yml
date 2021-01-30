@@ -1,0 +1,30 @@
+service: serverless-python-template
+
+frameworkVersion: '2'
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  conf: ${file(./config/config.yml):${opt:profile}
+  pythonRequirements:
+    dockerizePip: non-linux
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: ap-northeast-1
+  apiName: ${self:service}-${opt:profile}
+  profile: ${self:custom.conf}.profile}
+  deploymentBucket:
+    name: ${self:custom.conf}.deployBucketName}
+  stage: api
+  iamRoleStatements: ${file(./config/iam.yml)}
+
+# lambda定義
+functions: ${file(./config/functions.yml)}
+
+# awsリソースの定義
+resources:
+  - ${file(./config/resources/s3.yml)}
+  - ${file(./config/resources/dynamodb.yml)}

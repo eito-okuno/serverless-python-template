@@ -1,0 +1,5 @@
+Resources:
+  TemplateS3Bucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: serverless-python-template-bucket

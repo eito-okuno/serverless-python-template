@@ -1,0 +1,9 @@
+template:
+  handler: handler.hello
+  environment: ${self:custom.conf}.env}
+  events:
+    - http:
+        path: hello
+        method: get
+        cors: true
+    
