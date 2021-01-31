@@ -14,7 +14,6 @@ npm install -g serverless
 # Usage（環境別）
 
 ## 設定（serverless.yml）の確認
----
 ### 開発環境
     sls print --profile dev
 ### ステージング環境
@@ -23,7 +22,6 @@ npm install -g serverless
     sls print --profile prod
 
 ## デプロイ
----
 ### 開発環境
     sls deploy --profile dev
 ### ステージング環境
@@ -32,7 +30,6 @@ npm install -g serverless
     sls deploy --profile prod
 
 ## デプロイ済みサービスの削除
----
 ### 開発環境
     sls remove --profile dev
 ### ステージング環境
